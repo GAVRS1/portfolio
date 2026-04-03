@@ -1,0 +1,138 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #edf0ff;
+  background: #080b18;
+  line-height: 1.45;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), #24377f, #080b18 44%);
+}
+
+.page {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.ambient {
+  position: fixed;
+  inset: -20% -10%;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(106, 173, 255, 0.25), transparent 35%);
+  pointer-events: none;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+}
+
+.hero {
+  padding: clamp(1.4rem, 3vw, 3rem);
+}
+
+.chip {
+  width: fit-content;
+  margin: 0;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+h1 {
+  margin-bottom: 0.3rem;
+  font-size: clamp(2rem, 4.5vw, 4rem);
+}
+
+h1 span {
+  color: #8ad4ff;
+}
+
+.lead {
+  max-width: 65ch;
+}
+
+.role {
+  color: #97f6c4;
+  font-weight: 600;
+  min-height: 1.4em;
+}
+
+.actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.btn {
+  border: 0;
+  border-radius: 12px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, #2f7df4, #6f63ff);
+  color: #fff;
+}
+
+.btn-ghost {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.section {
+  margin-top: 1.3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+.card {
+  padding: 1rem;
+  transition: transform 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.form-wrap {
+  padding: 1rem;
+}
+
+.form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+input,
+textarea {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  color: #fff;
+  padding: 0.75rem;
+}
+
+.status {
+  color: #97f6c4;
+}
