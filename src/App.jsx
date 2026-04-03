@@ -5,6 +5,7 @@ const roles = ['Frontend Engineer', 'UI Alchemist', 'Product Thinker', 'Creative
 
 const projects = [
   {
+    type: 'telegram',
     title: 'Tic-Tac-Toe Telegram Web App',
     subtitle: 'Мини-игра в Telegram с мгновенным стартом и вирусным вовлечением.',
     description:
@@ -28,6 +29,7 @@ const projects = [
     }
   },
   {
+    type: 'dotnet',
     title: 'Blog-Platform / gavrs.online',
     subtitle: 'Контент-платформа для личного бренда с фокусом на скорость публикаций.',
     description:
@@ -51,6 +53,7 @@ const projects = [
     }
   },
   {
+    type: 'ai',
     title: 'AI-ассистент в браузере',
     subtitle: 'Контекстный помощник, который ускоряет рутину в веб-интерфейсах.',
     description:
