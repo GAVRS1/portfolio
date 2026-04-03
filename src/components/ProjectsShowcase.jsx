@@ -2,6 +2,12 @@ import { useEffect, useMemo, useState } from 'react';
 
 const STICKY_STEPS = 2.6;
 
+const themeClassByType = {
+  telegram: 'theme-telegram',
+  dotnet: 'theme-dotnet',
+  ai: 'theme-ai'
+};
+
 function ProjectsShowcase({ projects }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -50,8 +56,10 @@ function ProjectsShowcase({ projects }) {
           const isActive = index === activeIndex;
           const stateClass = isActive ? 'is-active' : index < activeIndex ? 'is-past' : 'is-future';
 
+          const themeClass = themeClassByType[project.type] || 'theme-default';
+
           return (
-            <article key={project.title} className={`project-stage ${side} ${stateClass} glass`}>
+            <article key={project.title} className={`project-stage ${side} ${stateClass} ${themeClass} glass`}>
               <img className="project-cover" src={project.media.cover} alt={project.title} loading="lazy" />
               <div className="card-content">
                 <h3>{project.title}</h3>
@@ -80,14 +88,17 @@ function ProjectsShowcase({ projects }) {
                   ))}
                 </div>
               </div>
-            </article>
+              </article>
           );
         })}
       </div>
 
       <div className="showcase-mobile-stack">
-        {projects.map((project) => (
-          <article key={project.title} className="card glass">
+        {projects.map((project) => {
+          const themeClass = themeClassByType[project.type] || 'theme-default';
+
+          return (
+            <article key={project.title} className={`card ${themeClass} glass`}>
             <img className="project-cover" src={project.media.cover} alt={project.title} loading="lazy" />
             <div className="card-content">
               <h3>{project.title}</h3>
@@ -102,8 +113,9 @@ function ProjectsShowcase({ projects }) {
                 ))}
               </div>
             </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
       </div>
     </section>
   );
