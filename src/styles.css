@@ -102,17 +102,58 @@ h1 span {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 0.9rem;
 }
 
 .card {
-  padding: 1rem;
+  overflow: hidden;
   transition: transform 180ms ease;
+}
+
+.card-content {
+  padding: 1rem;
 }
 
 .card:hover {
   transform: translateY(-6px);
+}
+
+.project-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.subtitle {
+  color: #97f6c4;
+  font-weight: 600;
+}
+
+.stack-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.8rem 0;
+}
+
+.stack-chip {
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 0.82rem;
+}
+
+.feature-list {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.project-links {
+  margin-top: 0.9rem;
 }
 
 .form-wrap {
