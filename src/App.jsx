@@ -81,7 +81,7 @@ function App() {
   const [mouse, setMouse] = useState({ x: 50, y: 50 });
   const [sent, setSent] = useState(false);
 
-  const owner = import.meta.env.VITE_SITE_OWNER || 'Твое Имя';
+  const owner = 'Тимур';
   const contact = import.meta.env.VITE_CONTACT_EMAIL || 'you@example.com';
 
   useEffect(() => {
@@ -138,17 +138,39 @@ function App() {
           Привет, я <span>{owner}</span>
         </h1>
         <p className="lead">
-          Создаю сайты, где дизайн ощущается как опыт, а интерфейс работает как инструмент роста.
+          Full-stack developer: .NET/React + Telegram Web Apps. Запускаю продукты с понятной бизнес-логикой,
+          быстрым фронтендом и устойчивым real-time бэкендом.
         </p>
+        <div className="stack-chips hero-facts">
+          <span className="stack-chip">3+ крупных pet-проекта</span>
+          <span className="stack-chip">.NET + React</span>
+          <span className="stack-chip">WebSocket/SignalR</span>
+          <span className="stack-chip">PostgreSQL/Redis</span>
+        </div>
         <p className="role">Сейчас в режиме: {roles[roleIndex]}</p>
 
         <div className="actions">
           <a href="#projects" className="btn btn-primary">
-            Смотреть проекты
+            Смотреть кейсы
+          </a>
+          <a href="https://tttoeonl.netlify.app" target="_blank" rel="noreferrer" className="btn btn-ghost">
+            Открыть Telegram-игру
+          </a>
+          <a href="https://gavrs.online" target="_blank" rel="noreferrer" className="btn btn-ghost">
+            Посмотреть соцсеть
           </a>
           <a href="#contact" className="btn btn-ghost">
             Связаться
           </a>
+        </div>
+
+        <div className="hero-materials">
+          <p className="materials-title">Доступные материалы:</p>
+          <div className="stack-chips">
+            <span className="stack-chip">demo</span>
+            <span className="stack-chip">видео</span>
+            <span className="stack-chip">скриншоты</span>
+          </div>
         </div>
       </header>
 
