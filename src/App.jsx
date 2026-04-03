@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import ProjectsShowcase from './components/ProjectsShowcase';
 
 const roles = ['Frontend Engineer', 'UI Alchemist', 'Product Thinker', 'Creative Coder'];
 
@@ -151,43 +152,7 @@ function App() {
         </div>
       </header>
 
-      <section id="projects" className="section">
-        <h2>Избранные проекты</h2>
-        <div className="grid">
-          {projects.map((project) => (
-            <article key={project.title} className="card glass">
-              <img className="project-cover" src={project.media.cover} alt={project.title} loading="lazy" />
-              <div className="card-content">
-                <h3>{project.title}</h3>
-                <p className="subtitle">{project.subtitle}</p>
-                <p>{project.description}</p>
-
-                <div className="stack-chips">
-                  {project.stack.map((tech) => (
-                    <span key={tech} className="stack-chip">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                <ul className="feature-list">
-                  {project.features.map((feature) => (
-                    <li key={feature}>{feature}</li>
-                  ))}
-                </ul>
-
-                <div className="actions project-links">
-                  {Object.entries(project.links).map(([label, href]) => (
-                    <a key={label} href={href} className="btn btn-ghost" target="_blank" rel="noreferrer">
-                      {label}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+      <ProjectsShowcase projects={projects} />
 
       <section id="contact" className="section glass form-wrap">
         <h2>Контакт</h2>
