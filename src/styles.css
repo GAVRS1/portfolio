@@ -67,6 +67,19 @@ h1 span {
   min-height: 1.4em;
 }
 
+.hero-facts {
+  margin-top: 0.8rem;
+}
+
+.hero-materials {
+  margin-top: 1rem;
+}
+
+.materials-title {
+  margin: 0 0 0.45rem;
+  font-weight: 600;
+}
+
 .actions {
   display: flex;
   gap: 0.8rem;
